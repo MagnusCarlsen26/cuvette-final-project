@@ -5,6 +5,12 @@
   ],
   "routes": [
     { "src": "/(.*)", "dest": "api/index.js" }
+  ],
+  "crons": [
+    {
+      "path": "/api/internal/cron/mark-expired",
+      "schedule": "0 2 * * *"
+    }
   ]
 }
 
