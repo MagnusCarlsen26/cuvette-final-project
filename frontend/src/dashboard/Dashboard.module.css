@@ -1,0 +1,336 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  min-height: 100vh;
+  background: #424457;
+  position: relative;
+}
+
+.sidebar {
+  background: var(--color-sidebar);
+  color: var(--color-text);
+  padding: 16px px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Mobile sidebar overlay */
+.sidebarOpen { }
+.backdrop {
+  position: fixed;
+  inset: 0;
+  background: var(--color-overlay);
+  z-index: var(--z-backdrop);
+}
+
+.brand {
+  height: 48px;
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  color: var(--color-text);
+  margin-top: 9px;
+  font-weight: 600;
+  gap: 8px;
+  border-bottom: 2px solid #424457;
+}
+
+.navItem {
+  padding: 10px 12px;
+  border-radius: 8px;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  text-decoration: none;
+  display: grid;
+  grid-template-columns: 20px 1fr;
+  align-items: center;
+  gap: 8px;
+  margin: 0px 12px;
+}
+.navItemActive {
+  background: #424457;
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.navIcon { width: 20px; height: 20px; display: grid; place-items: center; }
+
+.main {
+  display: grid;
+  grid-template-rows: 56px 1fr;
+}
+
+.topbar {
+  background: #424457;
+  color: var(--color-text);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  border-bottom: 1px solid #ffffff;
+}
+.topbarTitle { font-weight: 600; }
+
+/* Topbar search sizing */
+.topbar input { width: 320px; max-width: 100%; }
+
+.topbarLeft { display: flex; align-items: center; gap: 8px; padding-left: 24px; }
+.menuButton { display: none; background: transparent; border: 0; color: var(--color-text); font-size: 20px; cursor: pointer; }
+.settingsButton { display: inline-block; }
+
+.content {
+  padding-left: 16px;
+  padding-right: 16px;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Ensure page content is not hidden behind BottomNav on mobile */
+.contentPaddingBottom { padding: 16px; }
+
+.grid {
+  margin: 16px;
+  margin-top:32px;
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 32px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 16px;  
+}
+
+/* White background for the first card on each page section */
+.content .card:first-child { background: #ffffff; color: var(--gray-800); }
+
+.cardsRow {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+/* Responsive grid for statistics KPI cards */
+.statsCardsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.metricTitle {
+  font-size: 24px;
+  color: var(--text-292929);
+  font-weight: 500;
+  margin: 0 0 8px 0;
+}
+
+.metricList {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.metricItem {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 6px;
+}
+
+.metricItem img { width: 24px; height: 24px; }
+
+/* Ensure inner metric container spans full width */
+.metricItem > div {
+  width: 100%;
+  align-self: stretch;
+}
+
+.kpi { font-weight: 600; font-size: var(--fs-lg); color: var(--text-292929); }
+
+.chart {
+  border-radius: 10px;
+}
+
+.rightCol {
+  display: grid;
+  gap: 16px;
+}
+
+.listItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.pill {
+  height: 8px;
+  width: 80px;
+  background: var(--color-accent);
+  border-radius: 999px;
+}
+
+
+/* Rating pills for Top Products */
+.ratingRow {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.ratingPill,
+.ratingPillHalf,
+.ratingPillEmpty {
+  height: 8px;
+  width: 12px;
+  border-radius: 999px;
+}
+
+.ratingPill {
+  background: var(--color-accent); /* yellow */
+}
+
+.ratingPillHalf {
+  background: var(--color-accent-muted); /* light yellow for half */
+}
+
+.ratingPillEmpty {
+  background: var(--color-pill-empty);
+}
+
+/* Badge shown on all dashboard pages */
+.badge {
+  width: 64px;
+  height: 64px;
+}
+
+.badgeIcon {
+  width: 47px;
+  height: 47px;
+}
+
+.badgeSidebar {
+  width:30px;
+  height:30px;
+}
+
+/* Drag and drop helpers */
+.dragging {
+  opacity: 0.6;
+}
+
+.dragOver {
+  outline: 2px dashed rgba(255,255,255,0.22);
+  outline-offset: -6px;
+  border-radius: 10px;
+  background: var(--color-border);
+}
+
+.dropZone {
+  min-height: 0;
+}
+
+/* List item drag-over feedback for TopProducts */
+.listItemDragOver {
+  background: var(--color-border);
+  border-radius: 8px;
+}
+
+
+/* Typography helpers for dashboard */
+.textMuted { color: var(--color-text-muted); }
+.caption { font-size: var(--fs-xs); }
+.metricSub { 
+  font-size: var(--fs-xs); 
+  color: var(--text-292929); 
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+
+/* Bottom navigation (mobile only) */
+.bottomNav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: none;
+  background: var(--color-surface);
+  border-top: 1px solid var(--color-border);
+  box-shadow: 0 -4px 12px rgba(0,0,0,0.25);
+  padding: 8px 8px calc(8px + env(safe-area-inset-bottom));
+  z-index: 20;
+  border-radius: 12px;
+}
+
+.bottomNavItem {
+  flex: 1 1 0;
+  text-align: center;
+  color: var(--color-text-muted);
+  text-decoration: none;
+  padding: 8px 4px;
+  border-radius: 8px;
+}
+
+.bottomNavItemActive {
+  color: var(--color-text);
+  background: var(--color-border);
+}
+
+.bottomNavLabel { font-size: 12px; }
+.bottomNavIcon { width: 20px; height: 20px; display: block; margin: 0 auto 4px; }
+
+/* Responsive rules */
+@media (max-width: 1024px) {
+  .grid { grid-template-columns: 1fr; }
+  .metricList { grid-template-columns: repeat(2, 1fr); }
+  .cardsRow { grid-template-columns: repeat(2, 1fr); }
+  .statsCardsGrid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .wrapper { grid-template-columns: 1fr; }
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 260px;
+    transform: translateX(-100%);
+    transition: transform 200ms ease-in-out;
+    z-index: var(--z-sidebar);
+  }
+  .sidebar.sidebarOpen { transform: translateX(0); }
+  .menuButton { display: inline-block; }
+  .topbar { padding: 0 12px; }
+  .topbar { position: static; top: auto; z-index: auto; box-shadow: none; }
+  .topbarLeft { gap: 12px; }
+  .content { padding-left: 12px; padding-right: 12px; overflow-x: hidden; }
+  .card { padding: 12px; }
+  .metricItem img { width: 20px; height: 20px; }
+  .kpi { font-size: 18px; }
+  .topbar input { display: none; }
+  .bottomNav { display: flex; gap: 6px; }
+  .grid { grid-template-columns: 1fr; }
+  .statsCardsGrid { grid-template-columns: 1fr; gap: 12px; }
+}
+
+/* Hide settings button on desktop (web view) only */
+@media (min-width: 769px) {
+  .settingsButton { display: none; }
+  .badgeIcon { display: none; }
+}
+
+@media (max-width: 640px) {
+  .metricList { grid-template-columns: repeat(2, 1fr); }
+  .grid { gap: 12px; }
+  .cardsRow { gap: 10px; }
+  .cardsRow { grid-template-columns: 1fr; }
+}

@@ -5,9 +5,77 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: var(--color-bg);
+  color: var(--color-text);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+/* Layout normalization */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* App design tokens */
+:root {
+  --fs-xs: 12px;
+  --fs-sm: 14px;
+  --fs-md: 16px;
+  --fs-lg: 20px;
+  --fw-bold: 600;
+  --z-backdrop: 30;
+  --z-sidebar: 40;
+
+  /* Theme colors */
+  --color-bg: #0f1320;
+  --color-surface: #1a2032;
+  --color-sidebar: #0b0f1a;
+  --color-topbar: #1a2032;
+  --color-text: #e2e8f0;
+  --color-text-muted: #94a3b8;
+  --color-text-on-light: #111827;
+  --color-primary: #6f7dff;
+  --color-accent: #f6c960;
+  --color-accent-muted: #fde7a2;
+  --color-border: rgba(255,255,255,0.08);
+  --color-overlay: rgba(0,0,0,0.5);
+  --color-pill-empty: rgba(255, 255, 255, 0.08);
+
+  /* Semantic colors */
+  --color-success: #22c55e;
+  --color-danger: #ef4444;
+  --color-success-bg: rgba(34,197,94,0.2);
+  --color-danger-bg: rgba(239,68,68,0.2);
+
+  /* Chart colors */
+  --color-chart-purchase: rgba(104, 162, 255, 0.95);
+  --color-chart-sales: rgba(43, 213, 118, 0.95);
+  --color-chart-purchase-legend: rgba(104, 162, 255, 0.8);
+  --color-chart-sales-legend: rgba(43, 213, 118, 0.8);
+
+  /* Purchase gradient (Figma stops) */
+  --purchase-c1: #817AF3; /* 0% */
+  --purchase-c2: #74B0FA; /* 48% */
+  --purchase-c3: #79D0F1; /* 100% */
+  /* Flip direction (bottom-to-top) */
+  --gradient-chart-purchase: linear-gradient(0deg, var(--purchase-c1) 0%, var(--purchase-c2) 48%, var(--purchase-c3) 100%);
+
+  /* Sales gradient (Figma stops) */
+  --sales-c1: #46A46C; /* 0% */
+  --sales-c2: #51CC5D; /* 48% */
+  --sales-c3: #57DA65; /* 100% */
+  /* Flip direction (bottom-to-top) */
+  --gradient-chart-sales: linear-gradient(0deg, var(--sales-c1) 0%, var(--sales-c2) 48%, var(--sales-c3) 100%);
+
+  /* Neutrals */
+  --gray-800: #1f2937; /* grey-800 */
+  --gray-500: #6b7280; /* grey-500 */
+  --text-292929: #292929;
 }

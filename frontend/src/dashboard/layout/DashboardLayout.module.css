@@ -1,0 +1,22 @@
+.container {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  min-height: 100vh;
+  background: var(--color-bg);
+}
+
+.sidebar {
+  background: var(--color-sidebar);
+  border-right: 1px solid var(--color-border);
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  padding: 24px;
+}
+
+
