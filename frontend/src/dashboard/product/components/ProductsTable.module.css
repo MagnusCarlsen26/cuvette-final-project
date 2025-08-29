@@ -1,0 +1,90 @@
+.card {
+  background: #0f1324;
+  border: 1px solid #1d2236;
+  border-radius: 12px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tableContainer {
+  overflow-x: auto;
+}
+
+.table th,
+.table td {
+  text-align: center;
+  padding: 12px 16px;
+  border-bottom: 1px solid #1d2236;
+  border-right: 1px solid #1d2236;
+  color: #cbd3f2;
+  font-size: var(--fs-sm);
+}
+
+.table th:last-child,
+.table td:last-child {
+  border-right: 0;
+}
+
+.table thead th {
+  background: #0b0e1a;
+  color: #424457;
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-medium);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+/* Mobile: only 2 columns (Product, Availability) */
+@media (max-width: 768px) {
+  .table th:nth-child(2),
+  .table th:nth-child(3),
+  .table th:nth-child(4),
+  .table th:nth-child(5),
+  .table td:nth-child(2),
+  .table td:nth-child(3),
+  .table td:nth-child(4),
+  .table td:nth-child(5) { display: none; }
+}
+
+.pagination {
+  padding: 12px 16px;
+  color: #374151;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  background: #ffffff;
+  margin-top: 16px;
+}
+
+.btn {
+  background: #ffffff;
+  color: #374151;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  border: 1px solid #374151;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.in {
+  color: #2bd576;
+}
+
+.out {
+  color: #ff6262;
+}
+
+.low {
+  color: #ffb347;
+}
+
+

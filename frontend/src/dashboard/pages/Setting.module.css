@@ -1,0 +1,162 @@
+.tabsRow {
+  display: flex;
+  gap: 16px;
+  border-bottom: 1px solid rgba(0,0,0,0.30);
+}
+
+.tabBtn {
+  background: transparent;
+  color: #292929;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.tabActive {
+  background: rgba(255,255,255,0.06);
+  color: #292929;
+  border-bottom: 2px solid #292929;
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid rgba(0,0,0,0.30);
+}
+
+.formGrid {
+  margin: 16px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.formGroup {
+  display: grid;
+  gap: 8px;
+}
+
+.label {
+  color: #5e5e5e;
+  font-size: 14px;
+}
+
+.input {
+  height: 44px;
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+  color: #0f172a;
+  border-radius: 10px;
+  padding: 0 14px;
+  width: 100%;
+  max-width: 100%;
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+}
+
+.input:hover {
+  background: #f1f5f9;
+}
+
+.input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+  background: #fff;
+}
+
+.input::placeholder {
+  color: #9ca3af;
+}
+
+.input:disabled,
+.input[readonly] {
+  background: #f3f4f6;
+  color: #6b7280;
+  cursor: not-allowed;
+}
+
+.input[type="password"] {
+  letter-spacing: 0.04em;
+}
+
+.actionsRow {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 8px;
+}
+
+.primaryBtn {
+  height: 36px;
+  padding: 0 16px;
+  border-radius: 8px;
+  border: none;
+  background: #0b0f1a;
+  color: #e2e8f0;
+}
+
+.accountPane {
+  display: grid;
+  gap: 24px;
+  padding: 12px 16px;
+}
+
+.section {
+  display: grid;
+  gap: 12px;
+  padding: 12px 16px;
+}
+
+.sectionTitle {
+  color: #5e5e5e;
+  font-weight: bold;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.verifiedRow {
+  color: #000;
+}
+
+.accountRow {
+  display: grid;
+  grid-template-columns: 20px 1fr auto;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #cbd5e1;
+}
+
+.accountEmail {
+  color: #000;
+}
+.dangerBtn {
+  height: 32px;
+  padding: 0 12px;
+  border-radius: 8px;
+  border: none;
+  background: #f97316;
+  color: #0b0f1a;
+}
+
+.footerActions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 16px;
+  padding: 12px 16px 0;
+}
+
+.logoutBtn {
+  height: 40px;
+  padding: 0 100px;
+  border-radius: 8px;
+  border: none;
+  background: #b91c1c;
+  color: #fff;
+}
+
+

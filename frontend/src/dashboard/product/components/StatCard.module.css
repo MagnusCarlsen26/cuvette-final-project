@@ -1,0 +1,43 @@
+.card {
+  background: #0f1324;
+  border: 1px solid #1d2236;
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.row {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.icon {
+  height: 40px;
+  width: 40px;
+  background: #151a2e;
+  display: grid;
+  place-items: center;
+  border-radius: 8px;
+}
+
+.meta {
+  display: grid;
+}
+
+.label {
+  color: #aeb6d9;
+  font-size: 12px;
+}
+
+.value {
+  color: #e6ecff;
+  font-weight: 700;
+}
+
+.sublabel {
+  color: #7f89b9;
+  font-size: 12px;
+  margin-top: 8px;
+}
+
+
