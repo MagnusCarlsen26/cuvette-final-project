@@ -1,0 +1,210 @@
+[
+  {
+    "invoiceId": "INV-1001",
+    "items": [
+      { "name": "Basmati Rice (5kg)", "qty": 1, "unitPrice": 1090, "total": 1090 },
+      { "name": "Aashirvaad Atta (10kg)", "qty": 1, "unitPrice": 545, "total": 545 },
+      { "name": "Fortune Sunflower Oil (5L)", "qty": 1, "unitPrice": 1090, "total": 1090 }
+    ],
+    "subtotal": 2725,
+    "tax": 273,
+    "total": 2998,
+    "status": "unpaid",
+    "dueDate": { "$date": "2025-09-18T00:00:00.000Z" },
+    "createdAt": { "$date": "2025-09-03T10:00:00.000Z" }
+  },
+  {
+    "invoiceId": "INV-1002",
+    "items": [
+      { "name": "Parle-G Biscuits (20 pack)", "qty": 5, "unitPrice": 10, "total": 50 },
+      { "name": "Tata Salt (1kg)", "qty": 2, "unitPrice": 28, "total": 56 }
+    ],
+    "subtotal": 106,
+    "tax": 11,
+    "total": 117,
+    "status": "paid",
+    "referenceNumber": "REF-482913",
+    "dueDate": { "$date": "2025-09-17T00:00:00.000Z" },
+    "createdAt": { "$date": "2025-09-02T09:30:00.000Z" }
+  },
+  {
+    "invoiceId": "INV-1003",
+    "items": [
+      { "name": "Detergent Powder (2kg)", "qty": 3, "unitPrice": 120, "total": 360 },
+      { "name": "Shampoo (650ml)", "qty": 2, "unitPrice": 199, "total": 398 }
+    ],
+    "subtotal": 758,
+    "tax": 76,
+    "total": 834,
+    "status": "unpaid",
+    "dueDate": { "$date": "2025-09-05T00:00:00.000Z" },
+    "createdAt": { "$date": "2025-08-20T08:15:00.000Z" }
+  },
+  {
+    "invoiceId": "INV-1004",
+    "items": [
+      { "name": "Amul Milk (1L)", "qty": 6, "unitPrice": 58, "total": 348 },
+      { "name": "Bread (400g)", "qty": 4, "unitPrice": 40, "total": 160 },
+      { "name": "Eggs (dozen)", "qty": 2, "unitPrice": 70, "total": 140 }
+    ],
+    "subtotal": 648,
+    "tax": 65,
+    "total": 713,
+    "status": "paid",
+    "referenceNumber": "REF-713204",
+    "dueDate": { "$date": "2025-08-30T00:00:00.000Z" },
+    "createdAt": { "$date": "2025-08-18T12:00:00.000Z" }
+  },
+  {
+    "invoiceId": "INV-1005",
+    "items": [
+      { "name": "Assam Tea (1kg)", "qty": 1, "unitPrice": 480, "total": 480 },
+      { "name": "Sugar (5kg)", "qty": 1, "unitPrice": 220, "total": 220 },
+      { "name": "Coffee (200g)", "qty": 2, "unitPrice": 180, "total": 360 }
+    ],
+    "subtotal": 1060,
+    "tax": 106,
+    "total": 1166,
+    "status": "unpaid",
+    "dueDate": { "$date": "2025-09-10T00:00:00.000Z" },
+    "createdAt": { "$date": "2025-08-28T14:20:00.000Z" }
+  },
+  {
+    "invoiceId": "INV-1006",
+    "items": [
+      { "name": "Toothpaste (200g)", "qty": 3, "unitPrice": 95, "total": 285 },
+      { "name": "Bath Soap", "qty": 6, "unitPrice": 32, "total": 192 }
+    ],
+    "subtotal": 477,
+    "tax": 48,
+    "total": 525,
+    "status": "unpaid",
+    "dueDate": { "$date": "2025-09-08T00:00:00.000Z" },
+    "createdAt": { "$date": "2025-08-27T09:10:00.000Z" }
+  },
+  {
+    "invoiceId": "INV-1007",
+    "items": [
+      { "name": "Potato Chips", "qty": 20, "unitPrice": 10, "total": 200 },
+      { "name": "Cola (2L)", "qty": 3, "unitPrice": 95, "total": 285 },
+      { "name": "Cookies", "qty": 5, "unitPrice": 35, "total": 175 }
+    ],
+    "subtotal": 660,
+    "tax": 66,
+    "total": 726,
+    "status": "paid",
+    "referenceNumber": "REF-926581",
+    "dueDate": { "$date": "2025-08-25T00:00:00.000Z" },
+    "createdAt": { "$date": "2025-08-15T16:45:00.000Z" }
+  },
+  {
+    "invoiceId": "INV-1008",
+    "items": [
+      { "name": "Rice (10kg)", "qty": 1, "unitPrice": 1999, "total": 1999 },
+      { "name": "Toor Dal (2kg)", "qty": 3, "unitPrice": 160, "total": 480 },
+      { "name": "Spices Combo Pack", "qty": 1, "unitPrice": 299, "total": 299 }
+    ],
+    "subtotal": 2778,
+    "tax": 278,
+    "total": 3056,
+    "status": "unpaid",
+    "dueDate": { "$date": "2025-09-12T00:00:00.000Z" },
+    "createdAt": { "$date": "2025-09-01T11:05:00.000Z" }
+  },
+  {
+    "invoiceId": "INV-1009",
+    "items": [
+      { "name": "Cooking Oil (1L)", "qty": 5, "unitPrice": 160, "total": 800 },
+      { "name": "Ghee (1L)", "qty": 1, "unitPrice": 650, "total": 650 }
+    ],
+    "subtotal": 1450,
+    "tax": 145,
+    "total": 1595,
+    "status": "paid",
+    "referenceNumber": "REF-305172",
+    "dueDate": { "$date": "2025-08-22T00:00:00.000Z" },
+    "createdAt": { "$date": "2025-08-10T07:50:00.000Z" }
+  },
+  {
+    "invoiceId": "INV-1010",
+    "items": [
+      { "name": "Instant Noodles", "qty": 10, "unitPrice": 15, "total": 150 },
+      { "name": "Tomato Sauce (500g)", "qty": 2, "unitPrice": 120, "total": 240 }
+    ],
+    "subtotal": 390,
+    "tax": 39,
+    "total": 429,
+    "status": "unpaid",
+    "dueDate": { "$date": "2025-09-07T00:00:00.000Z" },
+    "createdAt": { "$date": "2025-08-26T15:00:00.000Z" }
+  },
+  {
+    "invoiceId": "INV-1011",
+    "items": [
+      { "name": "Handwash (300ml)", "qty": 3, "unitPrice": 99, "total": 297 },
+      { "name": "Sanitizer (500ml)", "qty": 2, "unitPrice": 199, "total": 398 }
+    ],
+    "subtotal": 695,
+    "tax": 70,
+    "total": 765,
+    "status": "unpaid",
+    "dueDate": { "$date": "2025-09-09T00:00:00.000Z" },
+    "createdAt": { "$date": "2025-08-29T13:25:00.000Z" }
+  },
+  {
+    "invoiceId": "INV-1012",
+    "items": [
+      { "name": "Floor Cleaner (1L)", "qty": 2, "unitPrice": 220, "total": 440 },
+      { "name": "Dishwash Liquid (750ml)", "qty": 2, "unitPrice": 150, "total": 300 }
+    ],
+    "subtotal": 740,
+    "tax": 74,
+    "total": 814,
+    "status": "paid",
+    "referenceNumber": "REF-118744",
+    "dueDate": { "$date": "2025-08-27T00:00:00.000Z" },
+    "createdAt": { "$date": "2025-08-16T10:40:00.000Z" }
+  },
+  {
+    "invoiceId": "INV-1013",
+    "items": [
+      { "name": "Tissue Box", "qty": 5, "unitPrice": 55, "total": 275 },
+      { "name": "Garbage Bags (30 pcs)", "qty": 2, "unitPrice": 180, "total": 360 }
+    ],
+    "subtotal": 635,
+    "tax": 64,
+    "total": 699,
+    "status": "unpaid",
+    "dueDate": { "$date": "2025-09-06T00:00:00.000Z" },
+    "createdAt": { "$date": "2025-08-25T09:00:00.000Z" }
+  },
+  {
+    "invoiceId": "INV-1014",
+    "items": [
+      { "name": "Air Freshener", "qty": 3, "unitPrice": 149, "total": 447 },
+      { "name": "Mosquito Repellent", "qty": 2, "unitPrice": 199, "total": 398 }
+    ],
+    "subtotal": 845,
+    "tax": 85,
+    "total": 930,
+    "status": "unpaid",
+    "dueDate": { "$date": "2025-09-11T00:00:00.000Z" },
+    "createdAt": { "$date": "2025-08-31T17:35:00.000Z" }
+  },
+  {
+    "invoiceId": "INV-1015",
+    "items": [
+      { "name": "Energy Drink (250ml)", "qty": 12, "unitPrice": 95, "total": 1140 },
+      { "name": "Protein Bar", "qty": 10, "unitPrice": 120, "total": 1200 }
+    ],
+    "subtotal": 2340,
+    "tax": 234,
+    "total": 2574,
+    "status": "paid",
+    "referenceNumber": "REF-667902",
+    "dueDate": { "$date": "2025-08-20T00:00:00.000Z" },
+    "createdAt": { "$date": "2025-08-05T06:20:00.000Z" }
+  }
+]
+
+

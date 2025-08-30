@@ -1,0 +1,7 @@
+name,price,quantity,unit,threshold,expiryDate,sku,category
+Maggi Noodles,12.5,100,pack,10,2026-12-31,SKU-0001,Food
+Bru Coffee,299,50,jar,8,2026-11-15,SKU-0002,Beverages
+Red Bull,110,200,can,20,2026-10-10,SKU-0003,Beverages
+Bourn Vita,220,30,jar,5,2026-09-09,SKU-0004,Food
+Ariel Detergent,499,40,kg,6,2026-08-08,SKU-0005,Home Care
+

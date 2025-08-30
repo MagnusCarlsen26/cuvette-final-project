@@ -1,0 +1,169 @@
+﻿Software Requirements Document (SRD)
+Project Title
+Inventory Management Dashboard (MERN Stack with Custom Drag & Drop)
+Introduction
+The project is a MERN-based Inventory & Sales Management Dashboard that enables businesses to manage products, invoices, and sales statistics efficiently. It includes:
+●      A drag-and-drop enabled dashboard for managing UI widgets and product items.
+●      No external drag-and-drop library is to be used; only native HTML5 drag events and React state handling.
+●      Insights into sales, purchases, top-selling products, invoices, and inventory tracking.
+Purpose
+The system provides:
+●      Centralized dashboard for monitoring sales, purchases, and inventory.
+●      Product management with real-time stock status.
+●      Invoice generation and transaction management.
+●      Statistics visualization with charts.
+●      Drag-and-drop customization of dashboard widgets (e.g., rearranging statistics cards, graphs, and tables).
+Scope
+●      Users can add, update, delete, and track products.
+●      Users can generate and manage invoices.
+●      The system displays sales & purchase graphs.
+●      Dashboard widgets (cards, charts, product lists) are rearrangeable via drag-and-drop.
+●      Availability status is displayed dynamically (In stock, Low stock, Out of stock).
+●      The system should support pagination for large product lists.
+
+
+ 
+________________
+Functional Requirements
+Dashboard (Home)
+●      Display:
+○      Sales Overview (Sales, Revenue, Profit, Cost).
+○      Purchase Overview (Purchases, Cost, Cancel, Return).
+○      Inventory Summary (Quantity in hand, To be received).
+○      Product Summary (Suppliers, Categories).
+○      Sales & Purchase Graph.
+■      Graph will have options for weekly, monthly, yearly depending on the configuration using the button given in the graph.
+  
+
+○      Top Products List.
+■      Calculated based on Sales
+  
+
+The space provided will have the image uploaded (Only in case of Individual Product)
+
+
+●      Drag-and-Drop Support:
+○      Users can reorder widgets/cards.
+○      Widgets’ new layout is persisted in MongoDB.
+Product Management
+●      Features:
+○      Add/Edit/Delete Products.
+○      Product attributes: name, price, quantity, threshold value, expiry date, availability.
+○      Availability auto-calculated based on quantity and threshold value.
+  
+
+If the quantity is above threshold value, it is in stock, else low stock, and is out of stock when equal to zero.
+* A cron Job will run everyday to check expiry dates and will remove the products that have expired. If Product has expired then the status changes to Expired (IN RED same as Out of Stock and Quantity is made 0)
+* Price mentioned is the price of a single product
+* Pagination is handled on the backend and not on frontend side. 
+* On selection of adding Multiple Product, a CSV file will be uploaded and will not contain any image. 
+  
+* Clicking outside the modal responsible for uploading the doc should close the modal. 
+●      Pagination for product list.
+●      Search functionality.
+   * On clicking the products cell, we will be taken to a modal on the same page
+  
+
+That will prompt the user for Quantity and an option to order, which will then cause the quantity to change.  
+
+Invoice Management
+●      Features:
+○      Generate invoices with product details.
+○      Invoice list with status (Paid/Unpaid).
+○      View, edit status, or delete invoices.
+●      Export invoice as PDF/Printable format.
+   * When a product is added, then a Invoice Id is generated and fields are populated. Reference Number is empty and Status is Unpaid. 
+On clicking the three dot icon at the end of the row, it will prompt the user with a button (PAID) that will change the status to PAID and will generate a reference number. 
+   * The number of Applications that are processed will be equal to the number of unique invoices viewed 
+   * Pagination will be same as previous section
+Statistics Module
+●      Features:
+○      Total Revenue.
+○      Products Sold.
+○      Products in Stock.
+○      Graphs for monthly sales and purchase.
+○      Top Products with ranking & ratings.
+●      Graph filters (Weekly/Monthly).
+      * The drag and drop functionality applied in home screen will be applied here too, but in horizontal sections.
+Settings
+●      Profile management (user info, password).
+●      Option to reset dashboard layout.
+Authentication & Authorization
+●      Login and Signup Flow
+Implement a secure login and registration system using JWT (JSON Web Tokens) for authentication. On successful signup or login, a JWT token should be issued and securely stored on the client side to maintain the user session.
+
+
+●      Password Recovery (Forgot Password)
+Users should be able to recover their accounts through a “Forgot Password” option. On their registered email address, they will receive an OTP (One-Time Password) via email. Once verified, users can reset their password. This flow must be implemented through backend email service integration. On resetting it should navigate back to the Login Page
+
+
+●      Network Efficiency
+Ensure that each form submission (e.g., login, signup, password reset) results in only one HTTP request. This behavior should be verified using the browser's developer tools (Network tab) to prevent multiple or duplicate requests.
+
+
+●      Third-Party Libraries Restriction
+Use JWT for implementing authentication and do not use any third-party authentication libraries or services. The authentication logic must be built natively using custom backend logic and middleware.
+
+
+________________
+Notifications & Feedback
+●      Toast Notifications
+Implement toast-based notification feedback for user actions (e.g., login success, form creation, error messages). Use a UI library such as React Toastify or React Hot Toast to handle in-app notifications with customizable behavior and styling.
+
+
+Tech Stack
+●      Frontend:
+○      React.
+○      Vanilla CSS.
+●      Backend:
+○      Node.js with Express.
+○      MongoDB  for database storage.
+●      Hosting:
+○      Deploy the frontend using Vercel/Netlify.
+○      Deploy the backend using Render/Heroku.
+
+
+________________
+
+
+________________
+Submission Guidelines
+      1. GitHub Repository: Include a README with:
+○      Setup instructions.
+○      Features implemented.
+○      Demo credentials.
+      2. Live Demo Link: Host the app and share the live link.
+
+
+Do's:
+      1. Always use raw/vanilla css.
+      2. Always use modular css.
+      3. Always structure your project properly.
+      4. Always use proper naming for variables and functions.
+      5. Always use some kind of basic validations for forms.
+      6. Use jwt auth mechanism.
+      7. You can use any third party library for calendar and Graph or showing toast. Design can be flexible for toast.
+      8. Your password should always be stored in encrypted form, always prefer any encrypting library to do that. Also password comparison should be done use the same encryption library.
+      9. Proper error handling should be there on the backend and frontend. Your backend should return a proper response in case anything goes wrong.
+      10. Search and Pagination should be implemented in the backend.
+ 
+Don'ts:
+      1. Don't use any css library or frameworks
+      2. Don't store your passwords as plain string, it must be encrypted
+      3. Don't implement filtering, sorting or searching on the frontend
+      4. If your code is found to be copied from anywhere then your solution will not be considered for the evaluation
+      5. If ANY changes are made to the repo after the submission deadline has crossed, the project will NOT be evaluated irrespective of the impact of the change made.
+ 
+ 
+Evaluation Criteria:
+      1. Implementing pixel perfect UI
+      2. Coding standards and best practices
+      3. All the functionality should work properly which are the part of checklist
+      4. How well edge cases are handled
+      5. How well errors and validations are done
+ 
+ 
+Part of submission:
+      1. GitHub repo backend and frontend
+      2. Backend and frontend needs to be deployed in working condition
+      3. Deployed link for frontend and backend
