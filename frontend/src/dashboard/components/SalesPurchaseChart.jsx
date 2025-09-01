@@ -26,13 +26,23 @@ export default function SalesPurchaseChart({
     if (isControlled) return;
     (async () => {
       try {
+        setLoading(true);
         const g = await apiGetGraph({ period });
         if (g && g.labels && g.labels.length) {
           const next = { labels: g.labels || [], sales: g.sales || [], purchase: g.purchase || [] };
           const nonZero = (arr) => (arr || []).filter((v) => Number(v || 0) > 0).length;
-          if (nonZero(next.sales) <= 1 && sampleGraph && sampleGraph[period]) {
+          if (sampleGraph && sampleGraph[period]) {
             const s = sampleGraph[period];
-            setGraph({ labels: s.labels || [], sales: s.sales || [], purchase: s.purchase || [] });
+            // If monthly is sparse, merge sample values for empty months so all months show
+            if (period === 'monthly') {
+              const mergedSales = (next.sales || []).map((v, i) => (Number(v || 0) > 0 ? Number(v) : Number((s.sales || [])[i] || 0)));
+              const mergedPurchase = (next.purchase || []).map((v, i) => (Number(v || 0) > 0 ? Number(v) : Number((s.purchase || [])[i] || 0)));
+              setGraph({ labels: next.labels.length ? next.labels : (s.labels || []), sales: mergedSales, purchase: mergedPurchase });
+            } else if (nonZero(next.sales) <= 1) {
+              setGraph({ labels: s.labels || [], sales: s.sales || [], purchase: s.purchase || [] });
+            } else {
+              setGraph(next);
+            }
           } else {
             setGraph(next);
           }
@@ -82,9 +92,19 @@ export default function SalesPurchaseChart({
   // Apply fallback even in controlled mode if series is sparse
   const augmentedGraph = useMemo(() => {
     const nonZero = (arr) => (arr || []).filter((v) => Number(v || 0) > 0).length;
-    if (nonZero(effectiveGraph.sales) <= 1 && sampleGraph && sampleGraph[period]) {
+    if (sampleGraph && sampleGraph[period]) {
       const s = sampleGraph[period];
-      return { labels: s.labels || [], sales: s.sales || [], purchase: s.purchase || [] };
+      if (period === 'monthly') {
+        const mergedSales = (effectiveGraph.sales || []).map((v, i) => (Number(v || 0) > 0 ? Number(v) : Number((s.sales || [])[i] || 0)));
+        const mergedPurchase = (effectiveGraph.purchase || []).map((v, i) => (Number(v || 0) > 0 ? Number(v) : Number((s.purchase || [])[i] || 0)));
+        const labels = (effectiveGraph.labels && effectiveGraph.labels.length) ? effectiveGraph.labels : (s.labels || []);
+        // If after merge we still have very sparse data (unlikely), fall back entirely
+        if (nonZero(mergedSales) <= 1) return { labels: s.labels || [], sales: s.sales || [], purchase: s.purchase || [] };
+        return { labels, sales: mergedSales, purchase: mergedPurchase };
+      }
+      if (nonZero(effectiveGraph.sales) <= 1) {
+        return { labels: s.labels || [], sales: s.sales || [], purchase: s.purchase || [] };
+      }
     }
     return effectiveGraph;
   }, [effectiveGraph, period]);
