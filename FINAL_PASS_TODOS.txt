@@ -1,0 +1,38 @@
+Frontend
+  - add search bar in web view only
+  - horizontal white line below topbar
+  - remove settings button on top right in webview only
+  - remove badge.svg in top bar only in webview only
+  - add svgs in sidebar that are same as in mobile view
+.
+  Home
+    - General
+      - Modify chart data to test properly
+      - rupees symbol
+      - Hardcoded metric values
+    - Mobile view
+      ✅Increase size of badge.svg in top bar for all the pages.  
+      ✅The scales in y axis are all same ie 100.
+      ✅Increase size of metric titles - 'sales and purchase', 'sales overview'
+      ✅Space around in metric values
+    - Web View
+        - FIx inventory summary and product summary 
+  Product
+    - Fix product page metric labels position
+    - Fix Add Product dialog UI on product page
+    - Integrate product addition with backend
+    - Add svg in 3 button menu
+    - Responsive
+  Statistics
+    - Responsive    
+  Invoice
+    - Fix view invoice UI
+    - Improve UI of delete button in invoice
+    - Responsive
+  Settings
+    - Integrate with backend    
+    - Responsive
+    
+Backend
+  General
+    
